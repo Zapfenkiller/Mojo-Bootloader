@@ -16,9 +16,18 @@ This means that `Makefile` is just a copy of the respective `Makefile-v*` made
 before `make` gets called. Or you call the respective Makefiles directly, e. g.
 `make -f Makefile-v3`.
 
-**Check the VID/PID combination you use. The ones
-given are never legally covered by the license and keep property of their
-respective owners!**
+**Check the VID/PID combination you use. The ones given are never legally
+covered by the license and keep property of their respective owners!**
+
+While "ISP"ing the bootloader to the Mojo it is recommended to also set some
+fuses to new values:
+
+EXTENDED = 0xF3  
+HIGH = 0xD9  
+LOW = 0xDE  
+
+LOCKBIT = 0xEF (protects the bootloader against unintended overwrites)  
+
 
 ## See also
 
