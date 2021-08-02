@@ -51,7 +51,6 @@
 # official Arduino LLC VID
 # VID = 0x2341
 
-
 # USB product ID (PID)
 # official Leonardo PID
 # PID = 0x0036
@@ -60,10 +59,19 @@
 # official Esplora PID
 # PID = 0x003C
 
+
 # Embedded Micro VID
-VID = 0x29DD
+# reuse of this VID by others is forbidden by USB-IF
+# VID = 0x29DD
 # Mojo V3
-PID = 0x0001
+# PID = 0x0001
+
+
+# Experimental VID / PID - Microchip Technology, Inc.
+# reuse of this VID by others is forbidden by USB-IF
+VID = 0x04D8
+PID = 0xeBAD
+
 
 # MCU name
 MCU = atmega32u4
@@ -505,6 +513,7 @@ build: elf hex eep lss sym
 
 elf: $(TARGET).elf
 hex: $(TARGET).hex
+	@mv $(TARGET).hex $(TARGET)-Mojo-ATmega32u4.hex
 eep: $(TARGET).eep
 lss: $(TARGET).lss
 sym: $(TARGET).sym

@@ -13,7 +13,10 @@ From their documentation:
 > To build the bootloader for the ATmega16U4 (Mojo V2) copy Makefile-v2 to
 > Makefile and run make.
 This means that `Makefile` is just a copy of the respective `Makefile-v*` made
-before `make` gets called. **Check the VID/PID combination you use. The ones
+before `make` gets called. Or you call the respective Makefiles directly, e. g.
+`make -f Makefile-v3`.
+
+**Check the VID/PID combination you use. The ones
 given are never legally covered by the license and keep property of their
 respective owners!**
 

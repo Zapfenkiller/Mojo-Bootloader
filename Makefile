@@ -513,7 +513,7 @@ build: elf hex eep lss sym
 
 elf: $(TARGET).elf
 hex: $(TARGET).hex
-	@mv $(TARGET).hex $(TARGET)-Mojo.hex
+	@mv $(TARGET).hex $(TARGET)-Mojo-ATmega32u4.hex
 eep: $(TARGET).eep
 lss: $(TARGET).lss
 sym: $(TARGET).sym
