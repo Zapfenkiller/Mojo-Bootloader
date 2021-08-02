@@ -513,6 +513,7 @@ build: elf hex eep lss sym
 
 elf: $(TARGET).elf
 hex: $(TARGET).hex
+	@mv $(TARGET).hex $(TARGET)-Mojo.hex
 eep: $(TARGET).eep
 lss: $(TARGET).lss
 sym: $(TARGET).sym
