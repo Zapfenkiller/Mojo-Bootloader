@@ -62,15 +62,9 @@
 
 # Embedded Micro VID
 # reuse of this VID by others is forbidden by USB-IF
-# VID = 0x29DD
+VID = 0x29DD
 # Mojo V3
-# PID = 0x0001
-
-
-# Experimental VID / PID - Microchip Technology, Inc.
-# reuse of this VID by others is forbidden by USB-IF
-VID = 0x04D8
-PID = 0xeBAD
+PID = 0x0001
 
 
 # MCU name
