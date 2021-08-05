@@ -1,9 +1,8 @@
 # Spartan Configurator Bootloader
 
 Alternative to the genuine Alchitry Mojo V3 software:  
-Caterina bootloder adapted fully to 8 MHz clock and 500 mA of current draw.
-Experimental VID/PID combination usage due to some severe bootloader issues
-on a Win10 machine using genuine 0x29DD / 0x0001 signature.
+Caterina bootloder adapted fully to 8 MHz clock and 500 mA of possible current
+draw.
 
 Build using LUFA 111009.
 
@@ -22,11 +21,16 @@ covered by the license and keep property of their respective owners!**
 While "ISP"ing the bootloader to the Mojo it is recommended to also set some
 fuses to new values:
 
-EXTENDED = 0xF3  
-HIGH = 0xD9  
 LOW = 0xDE  
+HIGH = 0xD8  
+EXTENDED = 0xF3  
 
-LOCKBIT = 0xEF (protects the bootloader against unintended overwrites)  
+In any case ensure the BOOTRST fuse points to the bootloader section!
+
+After the bootloader is in the ATmega you might want to secure it against
+accidental overwrites:
+
+LOCKBIT = 0xEF  
 
 
 ## See also
